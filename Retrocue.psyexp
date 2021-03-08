@@ -184,30 +184,6 @@
         <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
-      <TextComponent name="probeIndicator">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="probeIndicator" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0,0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="13.5" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.2" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$arrowDir&amp;#10;" valType="extendedStr"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
       <PolygonComponent name="fixProbe">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -234,7 +210,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
       <KeyboardComponent name="keyResp">
-        <Param name="allowedKeys" updates="constant" val="'right','left','None'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y','None'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$correctResp" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -549,12 +525,12 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Welcome to the experiment!&amp;#10;(Press space to continue)" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Welcome to the experiment!&amp;#10;(Press a button to continue)" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="space1">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -658,7 +634,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="space2">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -802,7 +778,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="space3">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -871,7 +847,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="space4">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -915,30 +891,6 @@
         <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
-      <TextComponent name="probeIndicator_inst">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="probeIndicator_inst" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0,0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="2.5" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$arrowDir&amp;#10;" valType="extendedStr"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
       <PolygonComponent name="fixProbe_inst">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -965,7 +917,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
       <KeyboardComponent name="reponseInstr">
-        <Param name="allowedKeys" updates="constant" val="'left'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$correctResp" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1002,7 +954,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You just saw the test image. In this case, it was part of the memorized images. You also saw an arrow above the image. Press the correct arrow key to continue. You can answer immediately after the test image is presented without waiting for the green fixation cross. " valType="extendedStr"/>
+        <Param name="text" updates="constant" val="You just saw the test image. In this case, it was part of the memorized images. Press the correct button to continue. You can answer immediately after the test image is presented without waiting for the green fixation cross. " valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1033,7 +985,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="space5">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1053,7 +1005,7 @@
     </Routine>
     <Routine name="feedbackTest">
       <KeyboardComponent name="key_resp_5">
-        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1133,12 +1085,12 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Response reminder: left arrow if &quot;&lt;&quot; and test image was part of memory images. &amp;#10;Right arrow if &quot;&gt;&quot; and test image was part of memory images&amp;#10;NO response if test image was NOT part of memory images&amp;#10;(Press 'space' to start practice trials)" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Response reminder: left button test image was part of memory images. &amp;#10;Right button if test image was NOT part of memory images&amp;#10;(Press a button to start practice trials)" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="space6">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1351,30 +1303,6 @@
         <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
-      <TextComponent name="probeIndicator_Practice">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="probeIndicator_Practice" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0,0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="13.5" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.2" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$arrowDir&amp;#10;" valType="extendedStr"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
       <PolygonComponent name="fixProbe_Practice">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -1401,7 +1329,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
       <KeyboardComponent name="keyResp_Practice">
-        <Param name="allowedKeys" updates="constant" val="'right','left','None'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y','None'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$correctResp" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1521,7 +1449,7 @@
     </Routine>
     <Routine name="feedback_Run">
       <KeyboardComponent name="space_Run">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1565,7 +1493,7 @@
     </Routine>
     <Routine name="finalRoutine">
       <KeyboardComponent name="space_final">
-        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'b','y'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1711,10 +1639,21 @@
     </Routine>
   </Routines>
   <Flow>
+    <LoopInitiator loopType="TrialHandler" name="dontSkipInstructions">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="dontSkipInstructions" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <Routine name="Welcome"/>
     <LoopInitiator loopType="TrialHandler" name="instructionLoop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('instructions', &quot;On each trial, your task will be to remember images that are presented to you. The images will consist of either faces or scenes and there can be anywhere from one to four items.  (Press 'space')&quot;)]), OrderedDict([('instructions', &quot;At the end of a trial you will have to indicate whether an image presented after a short delay was part of the items that you remembered. (Press 'space')&quot;)]), OrderedDict([('instructions', &quot;Now we will see an example of trial. (Press 'space')&quot;)])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('instructions', 'On each trial your task will be to remember images that are presented to you. The images will consist of either faces or scenes and there can be either one to four images on a trial.')]), OrderedDict([('instructions', 'At the end of a trial you will have to indicate whether a test image presented after a short delay was part of the items that you remembered. ')]), OrderedDict([('instructions', 'If the test image was part of the memory images, then you have to press the left button (index finger)')]), OrderedDict([('instructions', 'If the image is NOT part of the memorized images, then press the right button (middle finger).')]), OrderedDict([('instructions', &quot;During the short remembering period, try to actively keep the images in your mind's eye. &quot;)]), OrderedDict([('instructions', 'Now we will see an example of a trial.')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="instructionTxt.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -1727,8 +1666,8 @@
     <LoopTerminator name="instructionLoop"/>
     <LoopInitiator loopType="TrialHandler" name="trials_Instr">
       <Param name="Selected rows" updates="None" val="0" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('stimulus1', 'scrambles/id019_v1_fm.jpg'), ('stimulus2', 'scrambles/id004_v1_fm.jpg'), ('stimulus3', 'scrambles/id005_v1_fm.jpg'), ('stimulus4', 'images/id004_v1_fm.jpg'), ('probeIm', 'images/id004_v1_fm.jpg'), ('probeCon', 1), ('load', 1), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id030_v1_fm.jpg'), ('stimulus2', 'images/id020_v1_fm.jpg'), ('stimulus3', 'images/id006_v1_fm.jpg'), ('stimulus4', 'images/id001_v1_fm.jpg'), ('probeIm', 'images/id016_v1_fm.jpg'), ('probeCon', 0), ('load', 4), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id095_v1_si.jpg'), ('stimulus2', 'images/id074_v1_si.jpg'), ('stimulus3', 'images/id103_v1_si.jpg'), ('stimulus4', 'images/id096_v1_si.jpg'), ('probeIm', 'images/id091_v1_si.jpg'), ('probeCon', 0), ('load', 3), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id090_v1_si.jpg'), ('stimulus2', 'scrambles/id098_v1_si.jpg'), ('stimulus3', 'images/id085_v1_si.jpg'), ('stimulus4', 'scrambles/id103_v1_si.jpg'), ('probeIm', 'images/id085_v1_si.jpg'), ('probeCon', 1), ('load', 2), ('category', 'si'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id031_v1_fm.jpg'), ('stimulus2', 'images/id010_v1_fm.jpg'), ('stimulus3', 'images/id034_v1_fm.jpg'), ('stimulus4', 'images/id032_v1_fm.jpg'), ('probeIm', 'images/id034_v1_fm.jpg'), ('probeCon', 1), ('load', 4), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id069_v1_ff.jpg'), ('stimulus2', 'images/id057_v1_ff.jpg'), ('stimulus3', 'images/id067_v1_ff.jpg'), ('stimulus4', 'scrambles/id057_v1_ff.jpg'), ('probeIm', 'images/id052_v1_ff.jpg'), ('probeCon', 0), ('load', 3), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id026_v1_fm.jpg'), ('stimulus2', 'scrambles/id006_v1_fm.jpg'), ('stimulus3', 'images/id017_v1_fm.jpg'), ('stimulus4', 'scrambles/id016_v1_fm.jpg'), ('probeIm', 'images/id026_v1_fm.jpg'), ('probeCon', 1), ('load', 2), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id061_v1_ff.jpg'), ('stimulus2', 'images/id036_v1_ff.jpg'), ('stimulus3', 'scrambles/id065_v1_ff.jpg'), ('stimulus4', 'scrambles/id062_v1_ff.jpg'), ('probeIm', 'images/id036_v1_ff.jpg'), ('probeCon', 1), ('load', 1), ('category', 'ff'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id130_v1_so.jpg'), ('stimulus2', 'images/id131_v1_so.jpg'), ('stimulus3', 'scrambles/id134_v1_so.jpg'), ('stimulus4', 'images/id132_v1_so.jpg'), ('probeIm', 'images/id132_v1_so.jpg'), ('probeCon', 1), ('load', 3), ('category', 'so'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id099_v1_si.jpg'), ('stimulus2', 'scrambles/id096_v1_si.jpg'), ('stimulus3', 'images/id095_v1_si.jpg'), ('stimulus4', 'scrambles/id101_v1_si.jpg'), ('probeIm', 'images/id081_v1_si.jpg'), ('probeCon', 0), ('load', 2), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id077_v1_si.jpg'), ('stimulus2', 'scrambles/id104_v1_si.jpg'), ('stimulus3', 'scrambles/id090_v1_si.jpg'), ('stimulus4', 'scrambles/id089_v1_si.jpg'), ('probeIm', 'images/id077_v1_si.jpg'), ('probeCon', 1), ('load', 1), ('category', 'si'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id135_v1_so.jpg'), ('stimulus2', 'scrambles/id122_v1_so.jpg'), ('stimulus3', 'images/id114_v1_so.jpg'), ('stimulus4', 'images/id118_v1_so.jpg'), ('probeIm', 'images/id138_v1_so.jpg'), ('probeCon', 0), ('load', 3), ('category', 'so'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id078_v1_si.jpg'), ('stimulus2', 'scrambles/id077_v1_si.jpg'), ('stimulus3', 'images/id104_v1_si.jpg'), ('stimulus4', 'images/id102_v1_si.jpg'), ('probeIm', 'images/id104_v1_si.jpg'), ('probeCon', 1), ('load', 3), ('category', 'si'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id131_v1_so.jpg'), ('stimulus2', 'images/id133_v1_so.jpg'), ('stimulus3', 'scrambles/id112_v1_so.jpg'), ('stimulus4', 'scrambles/id109_v1_so.jpg'), ('probeIm', 'images/id133_v1_so.jpg'), ('probeCon', 1), ('load', 1), ('category', 'so'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id098_v1_si.jpg'), ('stimulus2', 'images/id076_v1_si.jpg'), ('stimulus3', 'images/id092_v1_si.jpg'), ('stimulus4', 'images/id071_v1_si.jpg'), ('probeIm', 'images/id105_v1_si.jpg'), ('probeCon', 0), ('load', 4), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id044_v1_ff.jpg'), ('stimulus2', 'images/id060_v1_ff.jpg'), ('stimulus3', 'images/id050_v1_ff.jpg'), ('stimulus4', 'images/id062_v1_ff.jpg'), ('probeIm', 'images/id062_v1_ff.jpg'), ('probeCon', 1), ('load', 4), ('category', 'ff'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id025_v1_fm.jpg'), ('stimulus2', 'images/id035_v1_fm.jpg'), ('stimulus3', 'images/id028_v1_fm.jpg'), ('stimulus4', 'images/id012_v1_fm.jpg'), ('probeIm', 'images/id025_v1_fm.jpg'), ('probeCon', 0), ('load', 3), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id023_v1_fm.jpg'), ('stimulus2', 'images/id003_v1_fm.jpg'), ('stimulus3', 'images/id022_v1_fm.jpg'), ('stimulus4', 'scrambles/id034_v1_fm.jpg'), ('probeIm', 'images/id022_v1_fm.jpg'), ('probeCon', 1), ('load', 3), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id049_v1_ff.jpg'), ('stimulus2', 'images/id056_v1_ff.jpg'), ('stimulus3', 'scrambles/id044_v1_ff.jpg'), ('stimulus4', 'images/id041_v1_ff.jpg'), ('probeIm', 'images/id049_v1_ff.jpg'), ('probeCon', 0), ('load', 2), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id065_v1_ff.jpg'), ('stimulus2', 'images/id039_v1_ff.jpg'), ('stimulus3', 'scrambles/id060_v1_ff.jpg'), ('stimulus4', 'images/id040_v1_ff.jpg'), ('probeIm', 'images/id065_v1_ff.jpg'), ('probeCon', 1), ('load', 3), ('category', 'ff'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id093_v1_si.jpg'), ('stimulus2', 'images/id089_v1_si.jpg'), ('stimulus3', 'images/id079_v1_si.jpg'), ('stimulus4', 'images/id101_v1_si.jpg'), ('probeIm', 'images/id093_v1_si.jpg'), ('probeCon', 1), ('load', 4), ('category', 'si'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id010_v1_fm.jpg'), ('stimulus2', 'scrambles/id012_v1_fm.jpg'), ('stimulus3', 'scrambles/id018_v1_fm.jpg'), ('stimulus4', 'images/id027_v1_fm.jpg'), ('probeIm', 'images/id005_v1_fm.jpg'), ('probeCon', 0), ('load', 1), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id109_v1_so.jpg'), ('stimulus2', 'images/id106_v1_so.jpg'), ('stimulus3', 'images/id129_v1_so.jpg'), ('stimulus4', 'images/id120_v1_so.jpg'), ('probeIm', 'images/id120_v1_so.jpg'), ('probeCon', 1), ('load', 4), ('category', 'so'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id108_v1_so.jpg'), ('stimulus2', 'images/id123_v1_so.jpg'), ('stimulus3', 'scrambles/id120_v1_so.jpg'), ('stimulus4', 'images/id116_v1_so.jpg'), ('probeIm', 'images/id122_v1_so.jpg'), ('probeCon', 0), ('load', 2), ('category', 'so'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id063_v1_ff.jpg'), ('stimulus2', 'images/id055_v1_ff.jpg'), ('stimulus3', 'images/id047_v1_ff.jpg'), ('stimulus4', 'images/id061_v1_ff.jpg'), ('probeIm', 'images/id053_v1_ff.jpg'), ('probeCon', 0), ('load', 4), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id127_v1_so.jpg'), ('stimulus2', 'scrambles/id124_v1_so.jpg'), ('stimulus3', 'scrambles/id123_v1_so.jpg'), ('stimulus4', 'scrambles/id106_v1_so.jpg'), ('probeIm', 'images/id112_v1_so.jpg'), ('probeCon', 0), ('load', 1), ('category', 'so'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id067_v1_ff.jpg'), ('stimulus2', 'scrambles/id047_v1_ff.jpg'), ('stimulus3', 'images/id046_v1_ff.jpg'), ('stimulus4', 'scrambles/id052_v1_ff.jpg'), ('probeIm', 'images/id038_v1_ff.jpg'), ('probeCon', 0), ('load', 1), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id133_v1_so.jpg'), ('stimulus2', 'images/id134_v1_so.jpg'), ('stimulus3', 'scrambles/id110_v1_so.jpg'), ('stimulus4', 'images/id124_v1_so.jpg'), ('probeIm', 'images/id124_v1_so.jpg'), ('probeCon', 1), ('load', 2), ('category', 'so'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id050_v1_ff.jpg'), ('stimulus2', 'images/id048_v1_ff.jpg'), ('stimulus3', 'scrambles/id055_v1_ff.jpg'), ('stimulus4', 'images/id064_v1_ff.jpg'), ('probeIm', 'images/id048_v1_ff.jpg'), ('probeCon', 1), ('load', 2), ('category', 'ff'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id018_v1_fm.jpg'), ('stimulus2', 'scrambles/id028_v1_fm.jpg'), ('stimulus3', 'images/id019_v1_fm.jpg'), ('stimulus4', 'scrambles/id022_v1_fm.jpg'), ('probeIm', 'images/id013_v1_fm.jpg'), ('probeCon', 0), ('load', 2), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id102_v1_si.jpg'), ('stimulus2', 'scrambles/id078_v1_si.jpg'), ('stimulus3', 'images/id080_v1_si.jpg'), ('stimulus4', 'scrambles/id091_v1_si.jpg'), ('probeIm', 'images/id075_v1_si.jpg'), ('probeCon', 0), ('load', 1), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&gt;')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="trials_Int.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials_Int.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -1756,8 +1695,8 @@
     <Routine name="reminderButtons"/>
     <LoopInitiator loopType="TrialHandler" name="trials_instr2">
       <Param name="Selected rows" updates="None" val="1:9" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('stimulus1', 'scrambles/id019_v1_fm.jpg'), ('stimulus2', 'scrambles/id004_v1_fm.jpg'), ('stimulus3', 'scrambles/id005_v1_fm.jpg'), ('stimulus4', 'images/id004_v1_fm.jpg'), ('probeIm', 'images/id004_v1_fm.jpg'), ('probeCon', 1), ('load', 1), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id030_v1_fm.jpg'), ('stimulus2', 'images/id020_v1_fm.jpg'), ('stimulus3', 'images/id006_v1_fm.jpg'), ('stimulus4', 'images/id001_v1_fm.jpg'), ('probeIm', 'images/id016_v1_fm.jpg'), ('probeCon', 0), ('load', 4), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id095_v1_si.jpg'), ('stimulus2', 'images/id074_v1_si.jpg'), ('stimulus3', 'images/id103_v1_si.jpg'), ('stimulus4', 'images/id096_v1_si.jpg'), ('probeIm', 'images/id091_v1_si.jpg'), ('probeCon', 0), ('load', 3), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id090_v1_si.jpg'), ('stimulus2', 'scrambles/id098_v1_si.jpg'), ('stimulus3', 'images/id085_v1_si.jpg'), ('stimulus4', 'scrambles/id103_v1_si.jpg'), ('probeIm', 'images/id085_v1_si.jpg'), ('probeCon', 1), ('load', 2), ('category', 'si'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id031_v1_fm.jpg'), ('stimulus2', 'images/id010_v1_fm.jpg'), ('stimulus3', 'images/id034_v1_fm.jpg'), ('stimulus4', 'images/id032_v1_fm.jpg'), ('probeIm', 'images/id034_v1_fm.jpg'), ('probeCon', 1), ('load', 4), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id069_v1_ff.jpg'), ('stimulus2', 'images/id057_v1_ff.jpg'), ('stimulus3', 'images/id067_v1_ff.jpg'), ('stimulus4', 'scrambles/id057_v1_ff.jpg'), ('probeIm', 'images/id052_v1_ff.jpg'), ('probeCon', 0), ('load', 3), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id026_v1_fm.jpg'), ('stimulus2', 'scrambles/id006_v1_fm.jpg'), ('stimulus3', 'images/id017_v1_fm.jpg'), ('stimulus4', 'scrambles/id016_v1_fm.jpg'), ('probeIm', 'images/id026_v1_fm.jpg'), ('probeCon', 1), ('load', 2), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id061_v1_ff.jpg'), ('stimulus2', 'images/id036_v1_ff.jpg'), ('stimulus3', 'scrambles/id065_v1_ff.jpg'), ('stimulus4', 'scrambles/id062_v1_ff.jpg'), ('probeIm', 'images/id036_v1_ff.jpg'), ('probeCon', 1), ('load', 1), ('category', 'ff'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id130_v1_so.jpg'), ('stimulus2', 'images/id131_v1_so.jpg'), ('stimulus3', 'scrambles/id134_v1_so.jpg'), ('stimulus4', 'images/id132_v1_so.jpg'), ('probeIm', 'images/id132_v1_so.jpg'), ('probeCon', 1), ('load', 3), ('category', 'so'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id099_v1_si.jpg'), ('stimulus2', 'scrambles/id096_v1_si.jpg'), ('stimulus3', 'images/id095_v1_si.jpg'), ('stimulus4', 'scrambles/id101_v1_si.jpg'), ('probeIm', 'images/id081_v1_si.jpg'), ('probeCon', 0), ('load', 2), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id077_v1_si.jpg'), ('stimulus2', 'scrambles/id104_v1_si.jpg'), ('stimulus3', 'scrambles/id090_v1_si.jpg'), ('stimulus4', 'scrambles/id089_v1_si.jpg'), ('probeIm', 'images/id077_v1_si.jpg'), ('probeCon', 1), ('load', 1), ('category', 'si'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id135_v1_so.jpg'), ('stimulus2', 'scrambles/id122_v1_so.jpg'), ('stimulus3', 'images/id114_v1_so.jpg'), ('stimulus4', 'images/id118_v1_so.jpg'), ('probeIm', 'images/id138_v1_so.jpg'), ('probeCon', 0), ('load', 3), ('category', 'so'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id078_v1_si.jpg'), ('stimulus2', 'scrambles/id077_v1_si.jpg'), ('stimulus3', 'images/id104_v1_si.jpg'), ('stimulus4', 'images/id102_v1_si.jpg'), ('probeIm', 'images/id104_v1_si.jpg'), ('probeCon', 1), ('load', 3), ('category', 'si'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id131_v1_so.jpg'), ('stimulus2', 'images/id133_v1_so.jpg'), ('stimulus3', 'scrambles/id112_v1_so.jpg'), ('stimulus4', 'scrambles/id109_v1_so.jpg'), ('probeIm', 'images/id133_v1_so.jpg'), ('probeCon', 1), ('load', 1), ('category', 'so'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id098_v1_si.jpg'), ('stimulus2', 'images/id076_v1_si.jpg'), ('stimulus3', 'images/id092_v1_si.jpg'), ('stimulus4', 'images/id071_v1_si.jpg'), ('probeIm', 'images/id105_v1_si.jpg'), ('probeCon', 0), ('load', 4), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id044_v1_ff.jpg'), ('stimulus2', 'images/id060_v1_ff.jpg'), ('stimulus3', 'images/id050_v1_ff.jpg'), ('stimulus4', 'images/id062_v1_ff.jpg'), ('probeIm', 'images/id062_v1_ff.jpg'), ('probeCon', 1), ('load', 4), ('category', 'ff'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id025_v1_fm.jpg'), ('stimulus2', 'images/id035_v1_fm.jpg'), ('stimulus3', 'images/id028_v1_fm.jpg'), ('stimulus4', 'images/id012_v1_fm.jpg'), ('probeIm', 'images/id025_v1_fm.jpg'), ('probeCon', 0), ('load', 3), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id023_v1_fm.jpg'), ('stimulus2', 'images/id003_v1_fm.jpg'), ('stimulus3', 'images/id022_v1_fm.jpg'), ('stimulus4', 'scrambles/id034_v1_fm.jpg'), ('probeIm', 'images/id022_v1_fm.jpg'), ('probeCon', 1), ('load', 3), ('category', 'fm'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id049_v1_ff.jpg'), ('stimulus2', 'images/id056_v1_ff.jpg'), ('stimulus3', 'scrambles/id044_v1_ff.jpg'), ('stimulus4', 'images/id041_v1_ff.jpg'), ('probeIm', 'images/id049_v1_ff.jpg'), ('probeCon', 0), ('load', 2), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id065_v1_ff.jpg'), ('stimulus2', 'images/id039_v1_ff.jpg'), ('stimulus3', 'scrambles/id060_v1_ff.jpg'), ('stimulus4', 'images/id040_v1_ff.jpg'), ('probeIm', 'images/id065_v1_ff.jpg'), ('probeCon', 1), ('load', 3), ('category', 'ff'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id093_v1_si.jpg'), ('stimulus2', 'images/id089_v1_si.jpg'), ('stimulus3', 'images/id079_v1_si.jpg'), ('stimulus4', 'images/id101_v1_si.jpg'), ('probeIm', 'images/id093_v1_si.jpg'), ('probeCon', 1), ('load', 4), ('category', 'si'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id010_v1_fm.jpg'), ('stimulus2', 'scrambles/id012_v1_fm.jpg'), ('stimulus3', 'scrambles/id018_v1_fm.jpg'), ('stimulus4', 'images/id027_v1_fm.jpg'), ('probeIm', 'images/id005_v1_fm.jpg'), ('probeCon', 0), ('load', 1), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'images/id109_v1_so.jpg'), ('stimulus2', 'images/id106_v1_so.jpg'), ('stimulus3', 'images/id129_v1_so.jpg'), ('stimulus4', 'images/id120_v1_so.jpg'), ('probeIm', 'images/id120_v1_so.jpg'), ('probeCon', 1), ('load', 4), ('category', 'so'), ('correctResp', 'right'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id108_v1_so.jpg'), ('stimulus2', 'images/id123_v1_so.jpg'), ('stimulus3', 'scrambles/id120_v1_so.jpg'), ('stimulus4', 'images/id116_v1_so.jpg'), ('probeIm', 'images/id122_v1_so.jpg'), ('probeCon', 0), ('load', 2), ('category', 'so'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id063_v1_ff.jpg'), ('stimulus2', 'images/id055_v1_ff.jpg'), ('stimulus3', 'images/id047_v1_ff.jpg'), ('stimulus4', 'images/id061_v1_ff.jpg'), ('probeIm', 'images/id053_v1_ff.jpg'), ('probeCon', 0), ('load', 4), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id127_v1_so.jpg'), ('stimulus2', 'scrambles/id124_v1_so.jpg'), ('stimulus3', 'scrambles/id123_v1_so.jpg'), ('stimulus4', 'scrambles/id106_v1_so.jpg'), ('probeIm', 'images/id112_v1_so.jpg'), ('probeCon', 0), ('load', 1), ('category', 'so'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id067_v1_ff.jpg'), ('stimulus2', 'scrambles/id047_v1_ff.jpg'), ('stimulus3', 'images/id046_v1_ff.jpg'), ('stimulus4', 'scrambles/id052_v1_ff.jpg'), ('probeIm', 'images/id038_v1_ff.jpg'), ('probeCon', 0), ('load', 1), ('category', 'ff'), ('correctResp', 'None'), ('arrowDir', '&gt;')]), OrderedDict([('stimulus1', 'scrambles/id133_v1_so.jpg'), ('stimulus2', 'images/id134_v1_so.jpg'), ('stimulus3', 'scrambles/id110_v1_so.jpg'), ('stimulus4', 'images/id124_v1_so.jpg'), ('probeIm', 'images/id124_v1_so.jpg'), ('probeCon', 1), ('load', 2), ('category', 'so'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id050_v1_ff.jpg'), ('stimulus2', 'images/id048_v1_ff.jpg'), ('stimulus3', 'scrambles/id055_v1_ff.jpg'), ('stimulus4', 'images/id064_v1_ff.jpg'), ('probeIm', 'images/id048_v1_ff.jpg'), ('probeCon', 1), ('load', 2), ('category', 'ff'), ('correctResp', 'left'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'images/id018_v1_fm.jpg'), ('stimulus2', 'scrambles/id028_v1_fm.jpg'), ('stimulus3', 'images/id019_v1_fm.jpg'), ('stimulus4', 'scrambles/id022_v1_fm.jpg'), ('probeIm', 'images/id013_v1_fm.jpg'), ('probeCon', 0), ('load', 2), ('category', 'fm'), ('correctResp', 'None'), ('arrowDir', '&lt;')]), OrderedDict([('stimulus1', 'scrambles/id102_v1_si.jpg'), ('stimulus2', 'scrambles/id078_v1_si.jpg'), ('stimulus3', 'images/id080_v1_si.jpg'), ('stimulus4', 'scrambles/id091_v1_si.jpg'), ('probeIm', 'images/id075_v1_si.jpg'), ('probeCon', 0), ('load', 1), ('category', 'si'), ('correctResp', 'None'), ('arrowDir', '&gt;')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="trials_Int.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials_Int.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -1771,6 +1710,7 @@
     <LoopTerminator name="trials_instr2"/>
     <Routine name="feedbackTest"/>
     <LoopTerminator name="repeat_InstrTrials"/>
+    <LoopTerminator name="dontSkipInstructions"/>
     <LoopInitiator loopType="TrialHandler" name="runs">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('textBefore_run', 'When ready for the first run, press SPACE'), ('trialSelect', 'trials_1.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 1. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_2.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 2. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_3.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 3. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_4.xlsx')])]" valType="str"/>
