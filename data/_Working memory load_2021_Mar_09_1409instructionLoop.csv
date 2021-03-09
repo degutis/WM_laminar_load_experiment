@@ -1,0 +1,18 @@
+﻿instructions,n,Instruction_text.started_mean,Instruction_text.started_raw,Instruction_text.started_std,Instruction_text.stopped_raw,space2.keys_raw,space2.rt_mean,space2.rt_raw,space2.rt_std,space2.started_mean,space2.started_raw,space2.started_std,space2.stopped_raw,order
+On each trial your task will be to remember images that are presented to you. The images will consist of either faces or scenes and there can be either one to four images on a trial.,1.0,1390.68701171875,1390.68701171875,0.0,,'b',0.251147985458374,0.251147985458374,0.0,1390.68701171875,1390.68701171875,0.0,,0.0
+At the end of a trial you will have to indicate whether a test image presented after a short delay was part of the items that you remembered. ,1.0,1390.9703369140625,1390.9703369140625,0.0,,'b',0.2881350517272949,0.2881350517272949,0.0,1390.9703369140625,1390.9703369140625,0.0,,1.0
+"If the test image was part of the memory images, then you have to press the left button (index finger)",1.0,1391.3037109375,1391.3037109375,0.0,,'b',0.3625609874725342,0.3625609874725342,0.0,1391.3037109375,1391.3037109375,0.0,,2.0
+"If the image is NOT part of the memorized images, then press the right button (middle finger).",1.0,1391.7034912109375,1391.7034912109375,0.0,,'b',0.42687392234802246,0.42687392234802246,0.0,1391.7034912109375,1391.7034912109375,0.0,,3.0
+"During the short remembering period, try to actively keep the images in your mind's eye. ",1.0,1392.170166015625,1392.170166015625,0.0,,'b',0.36033082008361816,0.36033082008361816,0.0,1392.170166015625,1392.170166015625,0.0,,4.0
+Now we will see an example of a trial.,1.0,1392.5701904296875,1392.5701904296875,0.0,,'b',0.344318151473999,0.344318151473999,0.0,1392.5701904296875,1392.5701904296875,0.0,,5.0
+
+extraInfo
+participant,
+session,001
+age,
+sex at birth,
+dominant hand,
+date,2021_Mar_09_1409
+expName,Working memory load
+psychopyVersion,2020.2.10
+frameRate,59.99447873382777
