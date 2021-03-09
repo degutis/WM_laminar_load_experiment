@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.10),
-    on March 08, 2021, at 21:17
+    on Tue 09 Mar 2021 12:37:34 PM CET
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Karolis\\Desktop\\Load_scanner_v1\\Retrocue_lastrun.py',
+    originPath='/data/pt_02389/PyschoPyCode/Load_experiment/Retrocue_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -642,7 +642,7 @@ for thisDontSkipInstruction in dontSkipInstructions:
     # set up handler to look after randomisation of conditions etc
     instructionLoop = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('instructionTxt.xlsx'),
+        trialList=data.importConditions('instructionTxt.csv'),
         seed=None, name='instructionLoop')
     thisExp.addLoop(instructionLoop)  # add the loop to the experiment
     thisInstructionLoop = instructionLoop.trialList[0]  # so we can initialise stimuli with some values

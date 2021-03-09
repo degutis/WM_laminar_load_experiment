@@ -1653,8 +1653,8 @@
     <Routine name="Welcome"/>
     <LoopInitiator loopType="TrialHandler" name="instructionLoop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('instructions', 'On each trial your task will be to remember images that are presented to you. The images will consist of either faces or scenes and there can be either one to four images on a trial.')]), OrderedDict([('instructions', 'At the end of a trial you will have to indicate whether a test image presented after a short delay was part of the items that you remembered. ')]), OrderedDict([('instructions', 'If the test image was part of the memory images, then you have to press the left button (index finger)')]), OrderedDict([('instructions', 'If the image is NOT part of the memorized images, then press the right button (middle finger).')]), OrderedDict([('instructions', &quot;During the short remembering period, try to actively keep the images in your mind's eye. &quot;)]), OrderedDict([('instructions', 'Now we will see an example of a trial.')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="instructionTxt.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="instructionTxt.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
