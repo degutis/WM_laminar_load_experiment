@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001', 'age': '', 'sex at birth': '', 'dominant hand': ''}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001', 'age': '', 'sex at birth': '', 'dominant hand': '', 'instructions': '1', 'realRuns': '0'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="" valType="str"/>
@@ -24,7 +24,7 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[1536, 864]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1536, 801]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
@@ -487,8 +487,8 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
       <CodeComponent name="numberCorrect_Reset">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before Experiment" updates="constant" val="import subprocess&amp;#10;subprocess.call(['sh', './gitHashRun.sh'])" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="import * as subprocess from 'subprocess';&amp;#10;subprocess.call([&quot;sh&quot;, &quot;./gitHashRun.sh&quot;]);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="number_correct = 0;&amp;#10;" valType="extendedCode"/>
@@ -1646,7 +1646,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="0" valType="code"/>
+      <Param name="nReps" updates="None" val="$expInfo['instructions']" valType="code"/>
       <Param name="name" updates="None" val="dontSkipInstructions" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -1711,6 +1711,17 @@
     <Routine name="feedbackTest"/>
     <LoopTerminator name="repeat_InstrTrials"/>
     <LoopTerminator name="dontSkipInstructions"/>
+    <LoopInitiator loopType="TrialHandler" name="runReal">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="$expInfo['realRuns']" valType="code"/>
+      <Param name="name" updates="None" val="runReal" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <LoopInitiator loopType="TrialHandler" name="runs">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('textBefore_run', 'When ready for the first run, press SPACE'), ('trialSelect', 'trials_1.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 1. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_2.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 2. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_3.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 3. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_4.xlsx')])]" valType="str"/>
@@ -1742,5 +1753,6 @@
     <Routine name="feedback_Run"/>
     <LoopTerminator name="runs"/>
     <Routine name="finalRoutine"/>
+    <LoopTerminator name="runReal"/>
   </Flow>
 </PsychoPy2experiment>
