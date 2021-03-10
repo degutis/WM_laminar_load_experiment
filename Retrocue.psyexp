@@ -525,7 +525,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Welcome to the experiment!&amp;#10;(Press a button to continue)" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Willkommen zum Experiment!&amp;#10;(Drücke bitte eine Taste)" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -773,7 +773,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="On this trial, you have to remember one stimulus and ignore the scrambled images" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Hier musst du dir ein Bild merken und die übrigen Muster ignorieren.&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -842,7 +842,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="The red cross indicates the delay period. You have to keep the presented images in mind during this time. Fixate on the cross whenever it is present. No response can be made during this time.  " valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Das rote Kreuz markiert die Periode in der du die dir gezeigten Bilder im Kopf behalten solltest. &amp;#10;Während dieser Zeit sind keine Antworten möglich.&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -954,7 +954,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You just saw the test image. In this case, it was part of the memorized images. Press the correct button to continue. You can answer immediately after the test image is presented without waiting for the green fixation cross. " valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Das war das Probebild. In diesem Fall gehörte es zu den zu merkenden Bildern. Bitte drücke die entsprechende Taste um weiterzumachen. Du kannst immer antworten sobald das Probebild erscheint und musst nicht auf das grüne Kreuz warten.&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -980,7 +980,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great! &amp;#10;We will now have a couple of training trials to make sure you understood the task. (Press 'space')" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Super! &amp;#10;Lass uns einige Versuchsdurchgänge probieren um sicherzugehen, dass du die Aufgabe verstanden hast.&amp;#10;(Drücke bitte eine Taste)" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1042,7 +1042,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$'Perfomance has to be above 70% to move-on to the real task. Otherwise we can practice a little more. Your performance was '+percent_correct+'%.'" valType="extendedStr"/>
+        <Param name="text" updates="set every repeat" val="$' Wenn du über 70% Richtig hast kannst du mit dem eigentlichen Experiment beginnen. Ansonsten musst du noch etwas mehr üben. Du hattest '+percent_correct+'% richtig.'" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1085,7 +1085,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Response reminder: left button test image was part of memory images. &amp;#10;Right button if test image was NOT part of memory images&amp;#10;(Press a button to start practice trials)" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Zur Erinnerung: &amp;#10;Linke Taste, wenn das Probebild Teil der zu merkeneden Bilder war&amp;#10;Rechte Taste, wenn das Probebild nicht Teil der zu merkenden Bilder war&amp;#10;(Drücke eine Taste um mit den Probedurchgängen zu beginnen)" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1486,7 +1486,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$'Your performance was '+percent_correct+'%.'" valType="extendedStr"/>
+        <Param name="text" updates="set every repeat" val="$'Du hattest '+percent_correct+'% richtig.'" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1530,7 +1530,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Congratulations! You have finished the experiment. " valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Vielen Dank! Das Experiment ist zu Ende." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
