@@ -5,16 +5,16 @@
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
     <Param name="Completed URL" updates="None" val="" valType="str"/>
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
-    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Data filename" updates="None" val="u'data/%s' % (expInfo['participant']) + '/%s_%s_%s_%s' % (expInfo['participant'], expInfo['session'],expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001', 'age': '', 'sex at birth': '', 'dominant hand': '', 'instructions': '1', 'realRuns': '0'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001', 'age': '', 'sex at birth': '', 'dominant hand': '', 'instructions': '1', 'realRuns': '0', 'runNumber': 'trials_1.csv'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
     <Param name="Resources" updates="None" val="[]" valType="fileList"/>
-    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
     <Param name="Save log file" updates="None" val="True" valType="bool"/>
     <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
@@ -24,7 +24,7 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="[1536, 801]" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1024, 768]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
@@ -398,6 +398,23 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="percent_correct = round(((number_correct / ntotal) * 100), 2).toString();&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="percent_correct = str(round(number_correct/ntotal*100,2))" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="trialEndBlank">
       <PolygonComponent name="fixStartTrial">
@@ -437,8 +454,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (keyResp.corr) {&amp;#10;    number_correct = (number_correct + 1);&amp;#10;}&amp;#10;percent_correct = round(((number_correct / trials.nTotal) * 100), 2).toString();&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if keyResp.corr:&amp;#10;    number_correct = number_correct + 1&amp;#10;    &amp;#10;percent_correct = str(round(number_correct/trials.nTotal*100,2))" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (keyResp.corr) {&amp;#10;    number_correct = (number_correct + 1);&amp;#10;    ntotal = (ntotal + 1);&amp;#10;} else {&amp;#10;    ntotal = (ntotal + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if keyResp.corr:&amp;#10;    number_correct = number_correct + 1&amp;#10;    ntotal=ntotal+1&amp;#10;else:&amp;#10;    ntotal=ntotal+1&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="countCorrectRun" valType="code"/>
       </CodeComponent>
@@ -464,7 +481,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="$textBefore_run" valType="extendedStr"/>
+        <Param name="text" updates="set every repeat" val="Der nächste Durchgang startet gleich ..." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -491,8 +508,8 @@
         <Param name="Before JS Experiment" updates="constant" val="import * as subprocess from 'subprocess';&amp;#10;subprocess.call([&quot;sh&quot;, &quot;./gitHashRun.sh&quot;]);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="number_correct = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="number_correct = 0" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="number_correct = 0;&amp;#10;ntotal = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="number_correct = 0&amp;#10;ntotal=0" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -554,8 +571,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="msg=&quot;&quot;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="msg = &quot;&quot;;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if (keyResp_Practice.corr) {&amp;#10;    msg = &quot;Correct&quot;;&amp;#10;    number_correct = (number_correct + 1);&amp;#10;} else {&amp;#10;    msg = &quot;Incorrect&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="if keyResp_Practice.corr:&amp;#10;    msg=&quot;Correct&quot;&amp;#10;    number_correct = number_correct+1&amp;#10;else:&amp;#10;    msg=&quot;Incorrect&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if (keyResp_Practice.corr) {&amp;#10;    msg = &quot;Richtige&quot;;&amp;#10;    number_correct = (number_correct + 1);&amp;#10;    ntotal = (ntotal + 1);&amp;#10;} else {&amp;#10;    msg = &quot;Falsch&quot;;&amp;#10;    ntotal = (ntotal + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if keyResp_Practice.corr:&amp;#10;    msg=&quot;Richtige&quot;&amp;#10;    number_correct = number_correct+1&amp;#10;    ntotal=ntotal+1&amp;#10;else:&amp;#10;    msg=&quot;Falsch&quot;&amp;#10;    ntotal=ntotal+1" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -602,8 +619,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="percent_correct = round(((number_correct / trials_instr2.nTotal) * 100), 2).toString();&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="percent_correct = str(round(number_correct/trials_instr2.nTotal*100,2))" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="percent_correct = round(((number_correct / ntotal) * 100), 2).toString();&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="percent_correct = str(round(number_correct/ntotal*100,2))" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="totalCorrect" valType="code"/>
       </CodeComponent>
@@ -1112,8 +1129,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="number_correct = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="number_correct = 0&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="number_correct = 0;&amp;#10;ntotal = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="number_correct = 0&amp;#10;ntotal=0" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1653,8 +1670,8 @@
     <Routine name="Welcome"/>
     <LoopInitiator loopType="TrialHandler" name="instructionLoop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="instructionTxt.csv" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('instructions', 'In jedem Versuchsdurchgang ist es deine Aufgabe, dir die jeweils am Anfang gezeigten Bilder zu merken. Dabei handelt es sich um jeweils 1 - 4 Gesichter oder Orte.')]), OrderedDict([('instructions', 'Am Ende eines jeden Versuchsdurchgangs solltest du beantworten ob ein angezeigtes Probebild Teil der zu merkenden Bilder ist.')]), OrderedDict([('instructions', 'Drücke dazu bitte die linke Taste (Zeigefinger), falls das Probebild eines der zu merkenden Bilder ist.')]), OrderedDict([('instructions', 'Drücke dazu bitte die rechte Taste (Mittelfinger), falls das Probebild NICHT zu den zu merkenden Bildern gehört.')]), OrderedDict([('instructions', 'Während Du dir die Bilder merkst, versuche bitte sie dir aktiv vor deinem inneren Auge vorzustellen.')]), OrderedDict([('instructions', 'Nun kommt ein Beispieldurchgang.')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="instructionTxtDE.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -1722,23 +1739,12 @@
       <Param name="name" updates="None" val="runReal" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <LoopInitiator loopType="TrialHandler" name="runs">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('textBefore_run', 'When ready for the first run, press SPACE'), ('trialSelect', 'trials_1.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 1. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_2.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 2. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_3.xlsx')]), OrderedDict([('textBefore_run', 'Done with run 3. Feel free to take a short break. Press SPACE when ready to continue.'), ('trialSelect', 'trials_4.xlsx')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="runs.csv" valType="str"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="runs" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
     <Routine name="Before_run"/>
     <Routine name="blankStart"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$trialSelect" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="$expInfo['runNumber']" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
@@ -1751,8 +1757,6 @@
     <LoopTerminator name="trials"/>
     <Routine name="blankEnd"/>
     <Routine name="feedback_Run"/>
-    <LoopTerminator name="runs"/>
-    <Routine name="finalRoutine"/>
     <LoopTerminator name="runReal"/>
   </Flow>
 </PsychoPy2experiment>
