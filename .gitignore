@@ -41,5 +41,5 @@ Thumbs.db
 # lib files used for local debugging
 /lib/
 /html/lib/
-# files within git folder
-/data/pt_02389/PyschoPyCode/Load_experiment/data/*
+
+
